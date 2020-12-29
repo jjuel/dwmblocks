@@ -5,6 +5,7 @@ static const Block blocks[] = {
 
 	/* {"", "date '+%b %d (%a) %I:%M%p'",					5,		0}, */
     {"", "network", 5, 4},
+    {"", "brightness", 1, 0},
     {"", "volume", 1, 0},
     {"", "battery", 5, 3},
     {"", "clock", 60, 1},
