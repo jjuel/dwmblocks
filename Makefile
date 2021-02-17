@@ -1,8 +1,11 @@
 PREFIX ?= /usr/local
 CC ?= cc
+CFLAGS = -I/usr/local/include
+LDLIBS = -L/usr/local/lib
+LDFLAGS = -lX11
 
 output: dwmblocks.c blocks.def.h blocks.h
-	${CC} `pkg-config --cflags x11 --libs x11` dwmblocks.c -o dwmblocks
+	${CC}  dwmblocks.c $(CFLAGS) $(LDLIBS) $(LDFLAGS) -o dwmblocks 
 blocks.h:
 	cp blocks.def.h $@
 
